@@ -13,7 +13,7 @@ namespace API.Queries.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202007101439464_InitialClassScheduleEntities"; }
+            get { return "202007101446119_InitialClassScheduleEntities"; }
         }
         
         string IMigrationMetadata.Source

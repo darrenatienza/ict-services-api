@@ -24,7 +24,7 @@ namespace API.Queries.Migrations
                 .PrimaryKey(t => t.ClassScheduleID)
                 .ForeignKey("Person.Employees", t => t.EmployeeID, cascadeDelete: true)
                 .ForeignKey("Common.Rooms", t => t.RoomID, cascadeDelete: true)
-                .ForeignKey("dbo.Sections", t => t.SectionID, cascadeDelete: true)
+                .ForeignKey("Common.Sections", t => t.SectionID, cascadeDelete: true)
                 .ForeignKey("Common.Subjects", t => t.SubjectID, cascadeDelete: true)
                 .Index(t => t.EmployeeID)
                 .Index(t => t.RoomID)
@@ -50,7 +50,7 @@ namespace API.Queries.Migrations
                 .PrimaryKey(t => t.RoomID);
             
             CreateTable(
-                "dbo.Sections",
+                "Common.Sections",
                 c => new
                     {
                         SectionID = c.Int(nullable: false, identity: true),
@@ -75,7 +75,7 @@ namespace API.Queries.Migrations
         public override void Down()
         {
             DropForeignKey("Schedule.ClassSchedules", "SubjectID", "Common.Subjects");
-            DropForeignKey("Schedule.ClassSchedules", "SectionID", "dbo.Sections");
+            DropForeignKey("Schedule.ClassSchedules", "SectionID", "Common.Sections");
             DropForeignKey("Schedule.ClassSchedules", "RoomID", "Common.Rooms");
             DropForeignKey("Schedule.ClassSchedules", "EmployeeID", "Person.Employees");
             DropForeignKey("Person.Employees", "EmployeeTypeID", "Common.EmployeeTypes");
@@ -86,7 +86,7 @@ namespace API.Queries.Migrations
             DropIndex("Schedule.ClassSchedules", new[] { "EmployeeID" });
             DropColumn("Person.Employees", "EmployeeTypeID");
             DropTable("Common.Subjects");
-            DropTable("dbo.Sections");
+            DropTable("Common.Sections");
             DropTable("Common.Rooms");
             DropTable("Common.EmployeeTypes");
             DropTable("Schedule.ClassSchedules");
