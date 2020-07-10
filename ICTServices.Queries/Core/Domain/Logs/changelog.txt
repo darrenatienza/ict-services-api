@@ -1,0 +1,8 @@
+﻿			Change Logs									Class
+----------------------------------------------------------------													
+
+8-25-2019
+Add new class with repective properties					SystemLog
+														UserActivityLog
+
+														

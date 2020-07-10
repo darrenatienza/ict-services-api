@@ -1,0 +1,9 @@
+﻿			Change Logs									Class
+----------------------------------------------------------------													
+9-22-2010
+update IdentityID to GUIDName							InvRecord
+
+8-25-2019
+Add IdentityID with guid datatype to use for logs		InvDetail
+														InvRecord
+														QtyInv

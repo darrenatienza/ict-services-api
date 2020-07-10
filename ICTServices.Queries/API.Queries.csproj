@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38C60A06-31D4-4C9F-B5DF-E5A245F07FD7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>API.Queries</RootNamespace>
+    <AssemblyName>ICTServices.Queries</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>C:\Users\IT\Google Drive\Programming Language\BsuSystem\Student_Id_System\IDRecordSys\MicrosoftLib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>C:\Users\IT\Google Drive\Programming Language\BsuSystem\Student_Id_System\IDRecordSys\MicrosoftLib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security">
+      <HintPath>C:\Users\IT\Google Drive\Programming Language\BsuSystem\Student_Id_System\IDRecordSys\MicrosoftLib\Microsoft.Practices.EnterpriseLibrary.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography">
+      <HintPath>C:\Users\IT\Google Drive\Programming Language\BsuSystem\Student_Id_System\IDRecordSys\MicrosoftLib\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2">
+      <HintPath>C:\Users\IT\Google Drive\Programming Language\BsuSystem\Student_Id_System\IDRecordSys\MicrosoftLib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>C:\Users\IT\Google Drive\Programming Language\BsuSystem\Student_Id_System\IDRecordSys\MicrosoftLib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Domain\Auth\Permission.cs" />
+    <Compile Include="Core\Domain\Auth\Role.cs" />
+    <Compile Include="Core\Domain\ClassSchedule\ClassSchedule.cs" />
+    <Compile Include="Core\Domain\Common\College.cs" />
+    <Compile Include="Core\Domain\Common\Course.cs" />
+    <Compile Include="Core\Domain\Common\EmployeeType.cs" />
+    <Compile Include="Core\Domain\Common\Room.cs" />
+    <Compile Include="Core\Domain\Common\Section.cs" />
+    <Compile Include="Core\Domain\ERBS\Item.cs" />
+    <Compile Include="Core\Domain\ERBS\Venue.cs" />
+    <Compile Include="Core\Domain\ERBS\Reservation.cs" />
+    <Compile Include="Core\Domain\Inventory\InvStat.cs" />
+    <Compile Include="Core\Domain\Inventory\InvType.cs" />
+    <Compile Include="Core\Domain\Common\Office.cs" />
+    <Compile Include="Core\Domain\Inventory\InvDetail.cs" />
+    <Compile Include="Core\Domain\Inventory\InvLocation.cs" />
+    <Compile Include="Core\Domain\Inventory\InvRecord.cs" />
+    <Compile Include="Core\Domain\Inventory\QtyInv.cs" />
+    <Compile Include="Core\Domain\Logs\SystemLog.cs" />
+    <Compile Include="Core\Domain\Logs\UserActivityLog.cs" />
+    <Compile Include="Core\Domain\Person\Employee.cs" />
+    <Compile Include="Core\IRepositories\Common\ILocationRepo.cs" />
+    <Compile Include="Core\Domain\Common\Location.cs" />
+    <Compile Include="Core\Domain\Common\Major.cs" />
+    <Compile Include="Core\Domain\Common\SchoolYear.cs" />
+    <Compile Include="Core\Domain\SG\SGReport.cs" />
+    <Compile Include="Core\Domain\Auth\User.cs" />
+    <Compile Include="Core\Domain\Person\Student.cs" />
+    <Compile Include="Core\Domain\StudentService\StudentReq.cs" />
+    <Compile Include="Core\Domain\Common\StudentReqType.cs" />
+    <Compile Include="Core\IRepositories\Common\ICourseRepo.cs" />
+    <Compile Include="Core\IRepositories\Auth\IPermissionRepository.cs" />
+    <Compile Include="Core\IRepositories\Auth\IRoleRepo.cs" />
+    <Compile Include="Core\IRepositories\Common\ICollegeRepo.cs" />
+    <Compile Include="Core\IRepositories\Common\IMajorRepo.cs" />
+    <Compile Include="Core\IRepositories\Common\IOfficeRepo.cs" />
+    <Compile Include="Core\IRepositories\Common\ISchoolYearRepo.cs" />
+    <Compile Include="Core\IRepositories\ERBS\IItemRepo.cs" />
+    <Compile Include="Core\IRepositories\ERBS\IVenueRepo.cs" />
+    <Compile Include="Core\IRepositories\ERBS\IReservationRepo.cs" />
+    <Compile Include="Core\IRepositories\Inventory\IInvStatRepo.cs" />
+    <Compile Include="Core\IRepositories\Inventory\IInvDetailRepo.cs" />
+    <Compile Include="Core\IRepositories\Inventory\IInvLocationRepo.cs" />
+    <Compile Include="Core\IRepositories\Inventory\IInvRecordRepo.cs" />
+    <Compile Include="Core\IRepositories\Inventory\IInvTypeRepo.cs" />
+    <Compile Include="Core\IRepositories\Inventory\IQtyInvRepo.cs" />
+    <Compile Include="Core\IRepositories\IRepository.cs" />
+    <Compile Include="Core\IRepositories\Logs\ISystemLogRepo.cs" />
+    <Compile Include="Core\IRepositories\Logs\IUserActivityLogRepo.cs" />
+    <Compile Include="Core\IRepositories\Person\IEmployeeRepo.cs" />
+    <Compile Include="Core\IRepositories\SG\ISGReportRepo.cs" />
+    <Compile Include="Core\IRepositories\Auth\IUserRepository.cs" />
+    <Compile Include="Core\IRepositories\Person\IStudentRepo.cs" />
+    <Compile Include="Core\IRepositories\StudentService\IStudReqRepo.cs" />
+    <Compile Include="Core\IRepositories\Common\IStudReqTypeRepo.cs" />
+    <Compile Include="Core\IUnitOfWork.cs" />
+    <Compile Include="Migrations\201905210658385_initial.cs" />
+    <Compile Include="Migrations\201905210658385_initial.Designer.cs">
+      <DependentUpon>201905210658385_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905220139220_add_field_to_user.cs" />
+    <Compile Include="Migrations\201905220139220_add_field_to_user.Designer.cs">
+      <DependentUpon>201905220139220_add_field_to_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905220633579_add_roles_table.cs" />
+    <Compile Include="Migrations\201905220633579_add_roles_table.Designer.cs">
+      <DependentUpon>201905220633579_add_roles_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906040535531_add_new_columns.cs" />
+    <Compile Include="Migrations\201906040535531_add_new_columns.Designer.cs">
+      <DependentUpon>201906040535531_add_new_columns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906080229360_add_column_studentReq_isPrintReady.cs" />
+    <Compile Include="Migrations\201906080229360_add_column_studentReq_isPrintReady.Designer.cs">
+      <DependentUpon>201906080229360_add_column_studentReq_isPrintReady.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906290242431_add_inventory_tables.cs" />
+    <Compile Include="Migrations\201906290242431_add_inventory_tables.Designer.cs">
+      <DependentUpon>201906290242431_add_inventory_tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907020759034_transfer_date_acquired_to_inventory_records.cs" />
+    <Compile Include="Migrations\201907020759034_transfer_date_acquired_to_inventory_records.Designer.cs">
+      <DependentUpon>201907020759034_transfer_date_acquired_to_inventory_records.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907090233089_add_code_column_to_inv_type.cs" />
+    <Compile Include="Migrations\201907090233089_add_code_column_to_inv_type.Designer.cs">
+      <DependentUpon>201907090233089_add_code_column_to_inv_type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907120107355_set_date_acquired_null.cs" />
+    <Compile Include="Migrations\201907120107355_set_date_acquired_null.Designer.cs">
+      <DependentUpon>201907120107355_set_date_acquired_null.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907170313564_set_qtyInvID_on_invRecord_to_nullable.cs" />
+    <Compile Include="Migrations\201907170313564_set_qtyInvID_on_invRecord_to_nullable.Designer.cs">
+      <DependentUpon>201907170313564_set_qtyInvID_on_invRecord_to_nullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907290053493_add_inv_stat_and_inv_stat_id_on_qty_inv.cs" />
+    <Compile Include="Migrations\201907290053493_add_inv_stat_and_inv_stat_id_on_qty_inv.Designer.cs">
+      <DependentUpon>201907290053493_add_inv_stat_and_inv_stat_id_on_qty_inv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908260426388_update_082610.cs" />
+    <Compile Include="Migrations\201908260426388_update_082610.Designer.cs">
+      <DependentUpon>201908260426388_update_082610.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909212133413_update_identity_ID_to_guid.cs" />
+    <Compile Include="Migrations\201909212133413_update_identity_ID_to_guid.Designer.cs">
+      <DependentUpon>201909212133413_update_identity_ID_to_guid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909212138443_update_identity_ID_to_guid_2.cs" />
+    <Compile Include="Migrations\201909212138443_update_identity_ID_to_guid_2.Designer.cs">
+      <DependentUpon>201909212138443_update_identity_ID_to_guid_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909240743439_unexpected_migration.cs" />
+    <Compile Include="Migrations\201909240743439_unexpected_migration.Designer.cs">
+      <DependentUpon>201909240743439_unexpected_migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909300108245_add_default_InvRecordGUID_on_InvRecord.cs" />
+    <Compile Include="Migrations\201909300108245_add_default_InvRecordGUID_on_InvRecord.Designer.cs">
+      <DependentUpon>201909300108245_add_default_InvRecordGUID_on_InvRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909300155458_add_migration.cs" />
+    <Compile Include="Migrations\201909300155458_add_migration.Designer.cs">
+      <DependentUpon>201909300155458_add_migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909300204185_add_databaseGenerationOption_computed.cs" />
+    <Compile Include="Migrations\201909300204185_add_databaseGenerationOption_computed.Designer.cs">
+      <DependentUpon>201909300204185_add_databaseGenerationOption_computed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909302159085_update-inventoryrecord-guid.cs" />
+    <Compile Include="Migrations\201909302159085_update-inventoryrecord-guid.Designer.cs">
+      <DependentUpon>201909302159085_update-inventoryrecord-guid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910010404188_change_userGuid_property.cs" />
+    <Compile Include="Migrations\201910010404188_change_userGuid_property.Designer.cs">
+      <DependentUpon>201910010404188_change_userGuid_property.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910090618169_update_initial_erbs.cs" />
+    <Compile Include="Migrations\201910090618169_update_initial_erbs.Designer.cs">
+      <DependentUpon>201910090618169_update_initial_erbs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Persistence\EntityConfiguration\ERBS\ReservationConfig.cs" />
+    <Compile Include="Persistence\EntityConfiguration\InvRecordConfig.cs" />
+    <Compile Include="Persistence\EntityConfiguration\UserConfiguration.cs" />
+    <Compile Include="Persistence\DataContext.cs" />
+    <Compile Include="Persistence\Repositories\Auth\PermissionRepository.cs" />
+    <Compile Include="Persistence\Repositories\Auth\RoleRepo.cs" />
+    <Compile Include="Persistence\Repositories\Common\CollegeRepo.cs" />
+    <Compile Include="Persistence\Repositories\Common\CoursesRepo.cs" />
+    <Compile Include="Persistence\Repositories\Common\LocationRepo.cs" />
+    <Compile Include="Persistence\Repositories\Common\MajorRepo.cs" />
+    <Compile Include="Persistence\Repositories\Common\OfficeRepo.cs" />
+    <Compile Include="Persistence\Repositories\Common\SchoolYearRepo.cs" />
+    <Compile Include="Persistence\Repositories\ERBS\ItemRepo.cs" />
+    <Compile Include="Persistence\Repositories\ERBS\VenueRepo.cs" />
+    <Compile Include="Persistence\Repositories\ERBS\ReservationRepo.cs" />
+    <Compile Include="Persistence\Repositories\Inventory\InvDetailRepo.cs" />
+    <Compile Include="Persistence\Repositories\Inventory\InvLocationRepo.cs" />
+    <Compile Include="Persistence\Repositories\Inventory\InvRecordRepo.cs" />
+    <Compile Include="Persistence\Repositories\Inventory\InvTypeRepo.cs" />
+    <Compile Include="Persistence\Repositories\Inventory\InvStatRepo.cs" />
+    <Compile Include="Persistence\Repositories\Inventory\QtyInvRepo.cs" />
+    <Compile Include="Persistence\Repositories\Logs\SystemLogRepo.cs" />
+    <Compile Include="Persistence\Repositories\Logs\UserActivityLogRepo.cs" />
+    <Compile Include="Persistence\Repositories\Person\EmployeeRepo.cs" />
+    <Compile Include="Persistence\Repositories\Repository.cs" />
+    <Compile Include="Persistence\Repositories\SG\SGReportRepo.cs" />
+    <Compile Include="Persistence\Repositories\Auth\UserRepository.cs" />
+    <Compile Include="Persistence\Repositories\Person\StudentRepo.cs" />
+    <Compile Include="Persistence\Repositories\StudentService\StudReqRepo.cs" />
+    <Compile Include="Persistence\Repositories\Common\StudReqTypeRepo.cs" />
+    <Compile Include="Persistence\UnitOfWork.cs" />
+    <Compile Include="Persistence\Utils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Persistence\EntityConfiguration\SG\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905210658385_initial.resx">
+      <DependentUpon>201905210658385_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905220139220_add_field_to_user.resx">
+      <DependentUpon>201905220139220_add_field_to_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905220633579_add_roles_table.resx">
+      <DependentUpon>201905220633579_add_roles_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906040535531_add_new_columns.resx">
+      <DependentUpon>201906040535531_add_new_columns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906080229360_add_column_studentReq_isPrintReady.resx">
+      <DependentUpon>201906080229360_add_column_studentReq_isPrintReady.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906290242431_add_inventory_tables.resx">
+      <DependentUpon>201906290242431_add_inventory_tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907020759034_transfer_date_acquired_to_inventory_records.resx">
+      <DependentUpon>201907020759034_transfer_date_acquired_to_inventory_records.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907090233089_add_code_column_to_inv_type.resx">
+      <DependentUpon>201907090233089_add_code_column_to_inv_type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907120107355_set_date_acquired_null.resx">
+      <DependentUpon>201907120107355_set_date_acquired_null.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907170313564_set_qtyInvID_on_invRecord_to_nullable.resx">
+      <DependentUpon>201907170313564_set_qtyInvID_on_invRecord_to_nullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907290053493_add_inv_stat_and_inv_stat_id_on_qty_inv.resx">
+      <DependentUpon>201907290053493_add_inv_stat_and_inv_stat_id_on_qty_inv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908260426388_update_082610.resx">
+      <DependentUpon>201908260426388_update_082610.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909212133413_update_identity_ID_to_guid.resx">
+      <DependentUpon>201909212133413_update_identity_ID_to_guid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909212138443_update_identity_ID_to_guid_2.resx">
+      <DependentUpon>201909212138443_update_identity_ID_to_guid_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909240743439_unexpected_migration.resx">
+      <DependentUpon>201909240743439_unexpected_migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909300108245_add_default_InvRecordGUID_on_InvRecord.resx">
+      <DependentUpon>201909300108245_add_default_InvRecordGUID_on_InvRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909300155458_add_migration.resx">
+      <DependentUpon>201909300155458_add_migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909300204185_add_databaseGenerationOption_computed.resx">
+      <DependentUpon>201909300204185_add_databaseGenerationOption_computed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909302159085_update-inventoryrecord-guid.resx">
+      <DependentUpon>201909302159085_update-inventoryrecord-guid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910010404188_change_userGuid_property.resx">
+      <DependentUpon>201910010404188_change_userGuid_property.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910090618169_update_initial_erbs.resx">
+      <DependentUpon>201910090618169_update_initial_erbs.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\Domain\Auth\changelog.txt" />
+    <Content Include="Core\Domain\Inventory\changelog.txt" />
+    <Content Include="Core\Domain\Logs\changelog.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

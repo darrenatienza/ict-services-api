@@ -1,0 +1,8 @@
+﻿			Change Logs									Class
+----------------------------------------------------------------													
+9-22-2019
+Change IdentityID to GUIDName							User
+
+8-26-2019
+Add IdentityID with guid datatype to use for logs		User
+														
