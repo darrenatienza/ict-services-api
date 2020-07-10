@@ -12,16 +12,12 @@ namespace API.Jwt.Controllers.ClassSchedule.v1
     {
         [AllowAnonymous]
         // GET api/classschedule
-        public async Task<IHttpActionResult> Get()
-        {
-            
-        }
+        public async Task<IHttpActionResult> Get() => 
+            Ok(new string[] { "asdf" });
 
         // GET api/classschedule/5
-        public string Get(int id)
-        {
-            return "value";
-        }
+        public string Get(int id) => 
+            "value";
 
         // POST api/classschedule
         public void Post([FromBody]string value)
