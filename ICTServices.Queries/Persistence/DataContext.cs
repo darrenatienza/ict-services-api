@@ -20,6 +20,7 @@ using API.Queries.Core.Domain.Inventory;
 using API.Queries.Core.Domain.Logs;
 using API.Queries.Persistence.EntityConfiguration;
 using API.Queries.Core.Domain.ERBS;
+using API.Queries.Core.Domain.Schedule;
 
 namespace API.Queries.Persistence
 {
@@ -29,7 +30,7 @@ namespace API.Queries.Persistence
             : base("name=DataContext")
             //: base("name=ServerContext")
         {
-            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.LazyLoadingEnabled = true;
             
             
             
@@ -62,11 +63,17 @@ namespace API.Queries.Persistence
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<Reservation> Reservations { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
+
+        public virtual DbSet<EmployeeType> EmployeeTypes { get; set; }
+        public virtual DbSet<Room> Rooms { get; set; }
+        public virtual DbSet<Section> Sections { get; set; }
+        public virtual DbSet<Subject> Subjects { get; set; }
+        public virtual DbSet<ClassSchedule> ClassSchedules { get; set; }
         /// <summary>
         /// Inventory Records
         /// </summary>
         //public virtual DbSet<Inventory.InvRec> InvRecs { get; set; }
-        
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new UserConfiguration());

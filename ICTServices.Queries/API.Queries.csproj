@@ -71,12 +71,13 @@
   <ItemGroup>
     <Compile Include="Core\Domain\Auth\Permission.cs" />
     <Compile Include="Core\Domain\Auth\Role.cs" />
-    <Compile Include="Core\Domain\ClassSchedule\ClassSchedule.cs" />
+    <Compile Include="Core\Domain\Schedule\ClassSchedule.cs" />
     <Compile Include="Core\Domain\Common\College.cs" />
     <Compile Include="Core\Domain\Common\Course.cs" />
     <Compile Include="Core\Domain\Common\EmployeeType.cs" />
     <Compile Include="Core\Domain\Common\Room.cs" />
     <Compile Include="Core\Domain\Common\Section.cs" />
+    <Compile Include="Core\Domain\Common\Subject.cs" />
     <Compile Include="Core\Domain\ERBS\Item.cs" />
     <Compile Include="Core\Domain\ERBS\Venue.cs" />
     <Compile Include="Core\Domain\ERBS\Reservation.cs" />
@@ -209,6 +210,10 @@
     <Compile Include="Migrations\201910090618169_update_initial_erbs.Designer.cs">
       <DependentUpon>201910090618169_update_initial_erbs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007101439464_InitialClassScheduleEntities.cs" />
+    <Compile Include="Migrations\202007101439464_InitialClassScheduleEntities.Designer.cs">
+      <DependentUpon>202007101439464_InitialClassScheduleEntities.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\EntityConfiguration\ERBS\ReservationConfig.cs" />
     <Compile Include="Persistence\EntityConfiguration\InvRecordConfig.cs" />
@@ -316,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910090618169_update_initial_erbs.resx">
       <DependentUpon>201910090618169_update_initial_erbs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007101439464_InitialClassScheduleEntities.resx">
+      <DependentUpon>202007101439464_InitialClassScheduleEntities.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
