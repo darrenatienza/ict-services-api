@@ -1,4 +1,5 @@
-﻿using System;
+﻿using API.Queries.Persistence;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,10 +11,17 @@ namespace API.Jwt.Controllers.ClassSchedule.v1
 {
     public class ClassScheduleController : ApiController
     {
+
         [AllowAnonymous]
         // GET api/classschedule
-        public async Task<IHttpActionResult> Get() => 
-            Ok(new string[] { "asdf" });
+        public async Task<IHttpActionResult> Get() {
+            using (var uow = new UnitOfWork(new DataContext()))
+            {
+                return Ok();
+            }
+        }
+            
+            
 
         // GET api/classschedule/5
         public string Get(int id) => 

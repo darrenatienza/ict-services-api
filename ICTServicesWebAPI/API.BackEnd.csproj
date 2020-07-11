@@ -26,6 +26,7 @@
     </NuGetPackageImportStamp>
     <ApplicationInsightsResourceId>/subscriptions/299a8348-8d36-4010-aaa0-5008c35e45de/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/WebApi.Jwt</ApplicationInsightsResourceId>
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -198,6 +199,8 @@
     <Compile Include="Models\Auth\v1\LoginModel.cs" />
     <Compile Include="Models\Log\v1\UserActivityModel.cs" />
     <Compile Include="Models\Person\EmployeeModel.cs" />
+    <Compile Include="Models\Schedule\ClassSchedule\RoomClassScheduleDTO.cs" />
+    <Compile Include="Models\Schedule\ClassSchedule\ScheduleItem.cs" />
     <Compile Include="Models\SG\ReportDescModel.cs" />
     <Compile Include="Models\SG\ReportModel.cs" />
     <Compile Include="Models\Person\StudentModel.cs" />
@@ -222,6 +225,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Controllers\Auth\v1_1\" />
   </ItemGroup>
   <PropertyGroup>
