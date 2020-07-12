@@ -120,6 +120,7 @@
     <Compile Include="Core\IRepositories\Logs\ISystemLogRepo.cs" />
     <Compile Include="Core\IRepositories\Logs\IUserActivityLogRepo.cs" />
     <Compile Include="Core\IRepositories\Person\IEmployeeRepo.cs" />
+    <Compile Include="Core\IRepositories\Schedule\IClassSchedule.cs" />
     <Compile Include="Core\IRepositories\SG\ISGReportRepo.cs" />
     <Compile Include="Core\IRepositories\Auth\IUserRepository.cs" />
     <Compile Include="Core\IRepositories\Person\IStudentRepo.cs" />
@@ -214,6 +215,10 @@
     <Compile Include="Migrations\202007101446119_InitialClassScheduleEntities.Designer.cs">
       <DependentUpon>202007101446119_InitialClassScheduleEntities.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007120438328_UpdateClassSchedule.cs" />
+    <Compile Include="Migrations\202007120438328_UpdateClassSchedule.Designer.cs">
+      <DependentUpon>202007120438328_UpdateClassSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\EntityConfiguration\ERBS\ReservationConfig.cs" />
     <Compile Include="Persistence\EntityConfiguration\InvRecordConfig.cs" />
@@ -240,6 +245,7 @@
     <Compile Include="Persistence\Repositories\Logs\UserActivityLogRepo.cs" />
     <Compile Include="Persistence\Repositories\Person\EmployeeRepo.cs" />
     <Compile Include="Persistence\Repositories\Repository.cs" />
+    <Compile Include="Persistence\Repositories\Schedule\ClassScheduleRepo.cs" />
     <Compile Include="Persistence\Repositories\SG\SGReportRepo.cs" />
     <Compile Include="Persistence\Repositories\Auth\UserRepository.cs" />
     <Compile Include="Persistence\Repositories\Person\StudentRepo.cs" />
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007101446119_InitialClassScheduleEntities.resx">
       <DependentUpon>202007101446119_InitialClassScheduleEntities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007120438328_UpdateClassSchedule.resx">
+      <DependentUpon>202007120438328_UpdateClassSchedule.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

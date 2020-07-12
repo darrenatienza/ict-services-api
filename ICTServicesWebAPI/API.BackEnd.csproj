@@ -124,7 +124,7 @@
     <Compile Include="Controllers\Admin\v1\RolesController.cs" />
     <Compile Include="Controllers\Admin\v1\UsersController.cs" />
     <Compile Include="Controllers\Admin\v1_1\UsersController.cs" />
-    <Compile Include="Controllers\ClassSchedule\v1\ClassScheduleController.cs" />
+    <Compile Include="Controllers\Schedule\v1\ClassScheduleController.cs" />
     <Compile Include="Controllers\Common\v1\CollegesController.cs" />
     <Compile Include="Controllers\Common\v1\LocationsController.cs" />
     <Compile Include="Controllers\Common\v1\LogsController.cs" />
@@ -151,6 +151,7 @@
     <Compile Include="Controllers\Inventory\v1_3\QtyInvsController.cs" />
     <Compile Include="Controllers\Inventory\v1_4\QtyInvsController.cs" />
     <Compile Include="Controllers\Person\v1\EmployeesController.cs" />
+    <Compile Include="Controllers\Schedule\v1\RoomClassScheduleController.cs" />
     <Compile Include="Controllers\SG\v1\SGController.cs" />
     <Compile Include="Controllers\Person\v1\StudentsController.cs" />
     <Compile Include="Controllers\StudentService\v1\StudentReqsController.cs" />
@@ -200,7 +201,7 @@
     <Compile Include="Models\Log\v1\UserActivityModel.cs" />
     <Compile Include="Models\Person\EmployeeModel.cs" />
     <Compile Include="Models\Schedule\ClassSchedule\RoomClassScheduleDTO.cs" />
-    <Compile Include="Models\Schedule\ClassSchedule\ScheduleItem.cs" />
+    <Compile Include="Models\Schedule\ClassSchedule\RoomClassScheduleItem.cs" />
     <Compile Include="Models\SG\ReportDescModel.cs" />
     <Compile Include="Models\SG\ReportModel.cs" />
     <Compile Include="Models\Person\StudentModel.cs" />

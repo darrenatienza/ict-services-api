@@ -9,5 +9,7 @@ namespace API.Jwt.Models.Schedule.ClassSchedule
     {
         public string RoomName { get; set; }
 
+        public List<RoomClassScheduleItem> RoomClassScheduleItems { get; set; }
+
     }
 }

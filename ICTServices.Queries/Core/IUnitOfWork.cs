@@ -4,6 +4,7 @@ using API.Queries.Core.IRepositories.Common;
 using API.Queries.Core.IRepositories.Inventory;
 using API.Queries.Core.IRepositories.Logs;
 using API.Queries.Core.IRepositories.Person;
+using API.Queries.Core.IRepositories.Schedule;
 using API.Queries.Core.IRepositories.SG;
 using API.Queries.Core.IRepositories.StudentService;
 using System;
@@ -51,7 +52,7 @@ namespace API.Queries.Core
         IReservationRepo Reservations { get;  }
         IItemRepo Items { get;  }
         IEmployeeRepo Employees { get; }
-
+        IClassSchedule ClassSchedules { get; }
         int Complete();
     }
 }

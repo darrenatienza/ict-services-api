@@ -19,6 +19,7 @@ using API.Queries.Persistence.Repositories.Common;
 using API.Queries.Persistence.Repositories.Inventory;
 using API.Queries.Core.IRepositories.Inventory;
 using API.Queries.Persistence.Repositories.Logs;
+using API.Queries.Core.IRepositories.Schedule;
 
 namespace API.Queries.Persistence
 {
@@ -56,6 +57,7 @@ namespace API.Queries.Persistence
             Offices = new OfficeRepo(_context);
             Employees = new EmployeeRepo(_context);
             Venues = new VenueRepo(_context);
+            ClassSchedules = new ClassScheduleRepo(_context);
 
         }
 
@@ -213,6 +215,12 @@ namespace API.Queries.Persistence
         }
 
         public IEmployeeRepo Employees
+        {
+            get;
+            private set;
+        }
+
+        public IClassSchedule ClassSchedules
         {
             get;
             private set;

@@ -29,5 +29,9 @@ namespace API.Queries.Core.Domain.Schedule
         public DateTime TimeEnd { get; set; }
         public DayOfWeek DayOfWeek { get; set; }
 
+        public virtual SchoolYear SchoolYear { get; set; }
+        public int SchoolYearID { get; set; }
+        public string Semester { get; set; }
+
     }
 }

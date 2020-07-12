@@ -5,8 +5,9 @@ using System.Web;
 
 namespace API.Jwt.Models.Schedule.ClassSchedule
 {
-    public class ScheduleItem
+    public class RoomClassScheduleItem
     {
-        public 
+        public string Description { get; set; }
+        public string Section { get; set; }
     }
 }
