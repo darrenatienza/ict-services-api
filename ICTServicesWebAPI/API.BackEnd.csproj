@@ -124,6 +124,7 @@
     <Compile Include="Controllers\Admin\v1\RolesController.cs" />
     <Compile Include="Controllers\Admin\v1\UsersController.cs" />
     <Compile Include="Controllers\Admin\v1_1\UsersController.cs" />
+    <Compile Include="Controllers\Auth\v2\AuthsController.cs" />
     <Compile Include="Controllers\Schedule\v1\ClassScheduleController.cs" />
     <Compile Include="Controllers\Common\v1\CollegesController.cs" />
     <Compile Include="Controllers\Common\v1\LocationsController.cs" />
@@ -227,7 +228,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\Auth\v1_1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
