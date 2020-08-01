@@ -28,7 +28,7 @@ namespace API.Jwt.Controllers.Auth.v2
             }
             else
             {
-                return Unauthorized();
+                return NotFound();
             }
 
            
