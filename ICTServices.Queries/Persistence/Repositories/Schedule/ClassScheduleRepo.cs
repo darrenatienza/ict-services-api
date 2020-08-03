@@ -26,7 +26,9 @@ namespace API.Queries.Persistence.Repositories.Person
             }
         }
 
-        public IEnumerable<ClassSchedule> GetAll(int roomID, string semester, int schoolYearID) => 
-            DataContext.ClassSchedules.Where(r => r.RoomID == roomID && r.Semester == semester && r.SchoolYearID == schoolYearID);
+        public IEnumerable<ClassSchedule> GetAll(int roomID, string semester, int schoolYearID)
+        {
+            return DataContext.ClassSchedules.Where(r => r.RoomID == roomID && r.Semester == semester && r.SchoolYearID == schoolYearID);
+        }
     }
 }
